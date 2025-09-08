@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TO-DO APP</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div id="toDoContainer" class="toDo-Container">
+      <h1 class="toDo-Title" id="toDoTitle">ToDo</h1>
+      <div class="errorMassage"></div>
+      <input type="text" placeholder="Görev Ekle" id="toDoInput" />
+      <div class="buttons">
+        <button id="addBtn" class="add-btn">Ekle</button>
+        <button id="clearBtn" class="clear-btn">Listeyi Temizle</button>
+      </div>
+      <ul class="todo-list" id="toDoList"></ul>
+      <div id="pagination" class="pagination"></div>
+      <div class="toDo-Bottom" id="toDoBottom">
+        <span id="taskCount">0 Görev</span>
+        <div class="filters" id="filters">
+          <button class="all">Hepsi</button>
+          <button class="active">Yapılacak</button>
+          <button class="completed">Tamamlanmış</button>
+        </div>
+      </div>
+    </div>
+
+    <template id="todo-template">
+      <li class="todo-item">
+        <input type="checkbox" class="check" />
+        <span class="todo-text"></span>
+        <div class="action-buttons">
+          <button class="edit-btn">
+            <i class="fa-solid fa-pen-to-square"></i>
+          </button>
+          <button class="delete-btn">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+      </li>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>
