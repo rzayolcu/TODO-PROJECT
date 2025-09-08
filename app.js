@@ -58,7 +58,7 @@ function renderTodos(animate = false) {
   const filteredTodos = getFilteredTodos();
   const totalPages = Math.ceil(filteredTodos.length / tasksPerPage) || 1;
 
-  // Eğer mevcut sayfa geçersiz kaldıysa, bir önceki sayfaya geç
+
   if (currentPage > totalPages) {
     currentPage = totalPages;
   }
@@ -233,7 +233,7 @@ clearBtn.addEventListener("click", () => {
 
   saveTodos();
 
-  // Sayfa geçişi varsa, boş kalan sayfaya düşmeyi engelle
+  
   const totalPages = Math.ceil(getFilteredTodos().length / tasksPerPage);
   if (currentPage > totalPages && totalPages > 0) {
     currentPage = totalPages;
@@ -249,3 +249,4 @@ toDoInput.addEventListener("keypress", (e) => {
 });
 
 window.addEventListener("DOMContentLoaded", () => renderTodos());
+
